@@ -1,0 +1,16 @@
+# Ignore main logs
+/Logs
+
+# Ignore py cache
+/Clean_logs/__pycache__
+/Zabbix/__pycache__
+/Program_update/__pycache__
+/GitHub_update/__pycache__
+# Ignore download file
+/downloads
+
+#Ignore GitHub logs
+/GitHub_update/last_update.txt
+
+
+
