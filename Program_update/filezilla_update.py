@@ -66,7 +66,7 @@ def comparisons_version():
 
 def link_download():
     new_version = check_new_version()
-    new_link = 'https://download.filezilla-project.org/client/FileZilla_'+ f"{new_version}" +'_win64_sponsored2-setup.exe'
+    new_link = 'https://download.filezilla-project.org/client/FileZilla_'+ f"{new_version}" +'_win64-setup.exe'
     return new_link.replace(' ','')
 
 # Function for get download file from website and install it
