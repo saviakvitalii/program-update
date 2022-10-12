@@ -18,6 +18,10 @@ else:
     # Handle target environment that doesn't support HTTPS verification
     ssl._create_default_https_context = _create_unverified_https_context
 
+headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) '\
+           'AppleWebKit/537.36 (KHTML, like Gecko) '\
+           'Chrome/75.0.3770.80 Safari/537.36'}
+
 ###########################
 # Basik dir, where script execute
 BASE_DIR = dirname(dirname(abspath(__file__)))
@@ -32,12 +36,12 @@ def get_current_date():
 
 # Function for get url page
 def get_html(url):
-    r = requests.get(url)
+    r = requests.get(url, headers=headers)
     return r
 
 # Function for get url text
 def get_html_text(url):
-    r = requests.get(url)
+    r = requests.get(url, headers=headers)
     return r.text
 
 # Functions for get old version program

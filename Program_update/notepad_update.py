@@ -18,6 +18,10 @@ else:
     # Handle target environment that doesn't support HTTPS verification
     ssl._create_default_https_context = _create_unverified_https_context
 
+headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) '\
+           'AppleWebKit/537.36 (KHTML, like Gecko) '\
+           'Chrome/75.0.3770.80 Safari/537.36'}
+
 ###########################
 # Basik dir, where script execute
 BASE_DIR = dirname(dirname(abspath(__file__)))
@@ -37,7 +41,7 @@ def check_old_version():
 
 # Function for get url page
 def get_html(url, params=None):
-    r = requests.get(url,params=params)
+    r = requests.get(url, headers=headers)
     return r
 
 #Function of getting url page
